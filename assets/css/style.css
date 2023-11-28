@@ -12,16 +12,39 @@ body {
 }
 
 .container {
+  background-color: blue;
+  height: 50%;
+  width: 50%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3fr;
-  gap: 10px;
+  grid-template-areas:
+    "nav section section"
+    "nav contenido contenido"
+    "nav footer";
+  gap: 30px;
   margin: auto;
 }
 
+.footer {
+  grid-area: footer;
+  background-color: blueviolet;
+}
+
+.contenido {
+  grid-area: contenido;
+  background-color: aqua;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: yellow;
+}
+
+.section {
+  grid-area: section;
+  background-color: red;
+}
+
 .box {
-  height: 100px;
-  width: 100px;
   border-radius: 1rem;
   background-color: red;
   text-align: center;
